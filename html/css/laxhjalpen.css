@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/*
+==================================================================================
+Global rules
+==================================================================================
+*/
+html {
+    margin: 2%;
+}
+body {
+    margin: auto;
+    max-width: 860px;
+    font-family: "Helvetica Neue", "Liberation Sans", Calibri, Arial, sans-serif;
+	font-size: 100%;
+}
+h1 {
+  font-family: "Merienda One", cursive;
+}
+h1::first-letter {
+  color: #00AF64;
+}
+/*
+/*
+section,header, footer {
+ outline: 1px solid red;
+}
+*
+*/
+/*
+==================================================================================
+Rules for reusable components
+==================================================================================
+*/
+.dborder {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+/*
+==================================================================================
+Page header, all pages
+==================================================================================
+*/
+header {
+  text-align: center;
+}
+/*
+==================================================================================
+Page footer rules
+==================================================================================
+*/
+footer{
+  margin-top: 3em;
+  text-align: center;
+  color: #999;
+}
+
+/*
+==================================================================================
+Main site navigation
+==================================================================================
+*/
+.menu > li,
+.menu > h2 {
+  margin: 0 0 1em;
+  padding: 2em 0;
+  background-color: #F5F5F5; /* ljus grå */
+  text-align: center;
+}
+.menu li,
+.menu h2 {
+  box-shadow: inset 0 0 20px #007241;
+  border-radius: 50%;
+  font-family: 'Merienda One', cursive;
+}
+.menu a:link,
+.menu a:visited {
+  text-decoration: none;
+  color: #000;
+}
+.menu a:focus,
+.menu a:hover {
+  text-decoration: underline;
+  color: #A62F00;
+}
+.menu a:active {
+  text-decoration: underline;
+  color: #FF4900
+}
+/*
+==================================================================================
+Start page rules
+==================================================================================
+*/
+.startpage h1 {
+  font-size:500%; /* Stor rubrik på startsida*/
+}
+.startpage .Logo {
+  width: 235px;
+  height: 198px;
+}
+.startpage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.startpage header,
+.startpage footer {
+  flex: 0 0 100%;
+}
+.startpage section {
+  flex: 0 0 22%;
+}
+
+/*
+==================================================================================
+Subpages
+==================================================================================
+*/
+.subpage .logo {
+  width: 146px;
+  height: 123px;
+}
+.subpage h1 {
+  font-size: 2.6rem;
+}
+h1 > span {
+  color: #a62f00;
+}
+.subpage .hwrap {
+  justify-content: space-between;
+}
+.subpage .hwrap >a,
+nav {
+  display: flex;
+  flex: 0 1 20%;
+  min-width: 146px;
+  margin-right: 10px;
+  outline: 1px solid; /* temporär */
+}
+.subpage .hwrap > h1,
+div[role=main] {
+	flex: 1 1 300px;
+}
+.menu {
+  margin: 1em 0;
+  padding: 0;
+}
+.menu li {
+  margin: 0 0 1rem;
+  list-style: none;
+}
+article {
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  border-bottom: 3px double #00af64;
+}
+article:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+article p {
+  margin-left: 140px;
+  hyphens: auto;
+}
+figure {
+  float: left;
+  margin: 0;
+}
+figure img {
+  width: 128px;
+  height: 128px;
+}
+figcaption {
+	font: italic bolder 110% sans-serif;
+  font-family: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  color: #666;
+}
+/*
+==================================================================================
+Tables
+==================================================================================
+*/
+
+/* TODO Avsnitt 12.3 */
+
+/*
+==================================================================================
+Nivo Slider
+==================================================================================
+*/
+
+/* TODO Avsnitt 14.7.4 */
+
+/*
+==================================================================================
+Forms (contact page)
+==================================================================================
+*/
+
+/* TODO Avsnitt 13.8.2 */
+
+/*
+==================================================================================
+Blog page, show and edit
+==================================================================================
+*/
+
+/* Detta kommer i boken Webbserverprogrammering 1 */
+
+/*
+==================================================================================
+Adaptive design
+==================================================================================
+*/
+.tagline {
+	font-size: 120%;
+	border-top: 3px double #00AF64;
+  border-bottom: 3px double #00AF64;
+	margin: 1em 0;
+}
+.hwrap {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+@media (max-width: 750px) {
+    .hwrap > a {
+        margin-right: 25px;
+    }
+/* TODO Avsnitt 15.4.2 + arbetsboken */
